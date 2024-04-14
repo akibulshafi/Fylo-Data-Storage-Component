@@ -1,0 +1,227 @@
+:root {
+    /* ### Primary */
+
+    --Gradient-from : hsl(6, 100%, 80%);
+    --Gradient-to: hsl(335, 100%, 65%);
+
+/* ### Neutral */
+
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+*, *:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {color: white; font-weight: 700;}
+
+body {
+    min-height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/*LEFT*/
+
+.left {
+    background-color: var(--Dark-Blue);
+    padding: 2rem 7rem 2rem 2rem;
+    border-radius: 10px 70px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    text-align: left;
+    box-shadow: 0px 0px 30px var(--Very-Dark-Blue);
+}
+
+.logo img {
+    height: 30px;
+}
+
+.comps {
+    display: flex;
+    gap: 15px;
+}
+
+.comps img {
+    object-fit: contain;
+    padding: 10px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+}
+
+/*RIGHT*/
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-Blue);
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 10px;
+    margin-top: 24px;
+    font-size: 14px;
+    min-width: 40%;
+    box-shadow: 0px 0px 30px var(--Very-Dark-Blue);
+    position: relative;
+}
+
+.right .usage-bar {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.bar {
+    width: 70%;
+    height: 15px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--Gradient-from), var(--Gradient-to));
+    margin-left: 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: progressBar 2s;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: var(--Pale-Blue);
+    border-radius: 100%;
+    margin-right: 2px;
+}
+
+.right p {color: var(--Pale-Blue);}
+.right p span {color: white; font-weight: 700;}
+.right .gb p {color: white; font-size: 14px; font-weight: 700;}
+.right .gb {display: flex; justify-content: space-between; margin-top: 10px;}
+
+
+/*GB LEFT BUBBLE*/
+
+.gb-left {
+	margin: 40px;
+    display: inline-block;
+    position: relative;
+	height: auto;
+	background-color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: -70px;
+}
+
+.pointer-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: 0px;
+	bottom: -15px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+
+.talktext{
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.talktext p {
+    color: var(--Grayish-Blue);
+}
+
+.talktext p span{
+    color: black;
+    font-size: 2rem;
+}
+
+.copyright {text-align: center;}
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 764px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        position: relative;
+        padding: 2rem 2rem 3rem 2rem;
+    }
+
+    .gb-left {
+        margin: 40px;
+        display: inline-block;
+        position: relative;
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        font-weight: 700;
+        position: absolute;
+        right: 40px;
+        top: 90px;
+    }
+
+    .pointer-right.btm-right:after{
+        content: ' ';
+        border: none;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+    }
+}
+
+/*HOVER & KEYFRAMES*/
+
+@keyframes progressBar {
+    from {
+        width: 3%;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+.comps img:active {
+    transform: scale(0.9);
+}
+
+.comps img:hover {
+    opacity: 70%;
+}
