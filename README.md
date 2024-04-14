@@ -4,8 +4,8 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/fylo-data-storage-component-with-animation-responsive-AaSicQVhom
+- Live Site URL: https://main--cute-tanuki-6262b1.netlify.app/
 
 ## My process
 
