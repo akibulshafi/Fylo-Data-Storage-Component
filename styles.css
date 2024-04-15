@@ -224,4 +224,5 @@ body {
 
 .comps img:hover {
     opacity: 70%;
+    cursor: pointer;
 }
